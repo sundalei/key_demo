@@ -16,11 +16,15 @@ class PositionedTiles extends StatefulWidget {
 
 class _PositionedTilesState extends State<PositionedTiles> {
   List<Widget> tiles = [
-    StatefulColorfulTile(
+    Padding(
       key: UniqueKey(),
+      padding: const EdgeInsets.all(8.0),
+      child: StatefulColorfulTile(),
     ),
-    StatefulColorfulTile(
+    Padding(
       key: UniqueKey(),
+      padding: const EdgeInsets.all(8.0),
+      child: StatefulColorfulTile(),
     ),
   ];
 
@@ -48,7 +52,7 @@ class _PositionedTilesState extends State<PositionedTiles> {
 }
 
 class StatefulColorfulTile extends StatefulWidget {
-  StatefulColorfulTile({required Key key}) : super(key: key);
+  StatefulColorfulTile({Key? key}) : super(key: key);
   @override
   _StatefulColorfulTileState createState() => _StatefulColorfulTileState();
 }
